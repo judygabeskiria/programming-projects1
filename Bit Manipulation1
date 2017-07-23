@@ -1,0 +1,5 @@
+//check if two integers have opposite signs
+boolean oppositeSign(int a, int b)
+{
+return ((a^b)<0); //xor
+}
