@@ -1,0 +1,23 @@
+//CD containing a playlist
+public class CD{
+private Playlist pl;
+}
+
+public class Playlist {
+private Song track;
+private Queue<Song> queue;
+public Playlist(Song track, Queue<Song> queue) { ... }
+public Song getNextTrackToPlay(){ return queue.peek(); }
+public void queueUpTrack(Song s){ queue.add(s); }
+}
+
+public class Song {
+private String songName;
+}
+
+public class TrackSelector {
+private Song currentSong;
+public TrackSelector(Song s) { currentSong=s; }
+public void setTrack(Song s) { currentSong = s;}
+public Song getCurrentSong() { return currentSong; }
+}
